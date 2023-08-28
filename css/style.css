@@ -1,0 +1,347 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+/*MENU*/
+.container-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-opciones{
+    display: grid;
+    grid-template-areas:
+     "imagen  opciones";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color:#ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.imagen-menu{
+    grid-area: imagen;
+    display: flex;
+    justify-content: start;
+    margin: 10px;
+}
+.imagen-menu img{
+    width: auto;
+    height: 10vh;
+    margin-left: 20px;
+}
+.opciones-menu{
+    display: flex;
+    flex-direction: row;
+    grid-area: opciones;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 15vw;
+    
+}
+.opciones-menu a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+}
+.opciones-menu a:hover{
+    color: rgb(0, 4, 255);
+    border-bottom: 1px solid rgb(0, 4, 255);
+}
+/*BANNER*/
+.container__banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background:url(../imagenes/fondo.webp)no-repeat center center;
+    background-size: cover;
+    
+}
+.descripcion-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+    background-color: white;
+    opacity: 0.80;
+}
+.descripcion-banner .descripcion__banner{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+/*Quienes somos*/
+.container__somos{
+    display: grid;
+    grid-template-areas: 
+    "contenido imagen";
+    grid-template-columns: auto;
+    grid-template-areas: auto;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    background-color: transparent;
+}
+.descripcion__somos{
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+.descripcion__somos .titulo__somos{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.imagen_somos{
+    grid-area: imagen;
+    margin: 20px;
+}
+.imagen_somos img{
+    width: auto;
+    height: 50vh;
+
+}
+/* Programas */
+.container__programas{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "cartas";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    place-content: center;
+}
+.titulo__programas{
+    grid-area: titulo;
+    font-size: 30px;
+    font-weight: bold;
+}
+.container-cartas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.cartas{
+    grid-area: cartas;
+    display: grid;
+    grid-template-areas:
+    "nombre" 
+    "imagenes"
+    "concepto";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    place-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgb(59, 127, 255);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 57vh;
+    width: 25vw;
+    margin: 20px;
+    
+}
+.cartas h3{
+    grid-area: nombre;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 300px;
+    padding-top: 10px;
+    color: rgb(4, 4, 160);
+}
+.cartas img{
+    grid-area: imagenes;
+    width: 100%;
+    height: 25vh;
+    padding: 10px;
+}
+.cartas p{
+    grid-area: concepto;
+    text-align: justify;
+    padding-bottom: 15px;
+    font-size: 13px;
+    max-width: 300px;
+}
+/*FOOTER*/
+.footer-container {
+    background-color: #d1d1d18c;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw 3vw;
+}
+
+.footer-logo {
+    width: 25vw;
+    margin-left: 7rem;
+
+}
+
+.footer-logo h2 {
+    font-size: 1.5vw;
+}
+
+.footer-logo p {
+    font-size: 1vw;
+    color: #6e6b6b;
+    padding: 1.5rem 0rem;
+    line-height: 2.1rem;
+}
+
+.footer-logo a {
+    text-decoration: none;
+}
+
+.fa {
+    background-color: var(--black);
+    color: #ffffff;
+    padding: .6rem;
+    border-radius: .3rem;
+}
+
+.icons {
+    margin: 0rem 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.footer-links h3 {
+    font-size: 1.5vw;
+    margin-left: 20px;
+}
+
+.footer-links ul a li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.footer-links ul a {
+    text-decoration: none;
+    color: #6e6b6b;
+}
+.copywright-tag {
+    background-color: lightgray;
+    padding: 1.5rem;
+    font-size: 1vw;
+    text-align: center;
+}
+.redes {
+    color: black;
+
+}
+/* Add a media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .opciones-menu {
+        display: none;
+    }
+    .imagen-menu {
+        justify-content: start;
+        margin: 20px 0;
+    }
+    .descripcion__banner {
+        height: auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+    .descripcion__somos {
+        width: 80vw;
+        text-align: center;
+    }
+    .imagen_somos img {
+        height: auto;
+        width: 80%;
+        margin-left: 30px;
+    }
+    .container-cartas {
+        justify-content: center;
+    }
+    .cartas {
+        width: 90%;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo {
+        margin-left: 0;
+        text-align: center;
+        width: 80%;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footer-links ul a li {
+        padding: 5px;
+    }
+    .copywright-tag {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Add a media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .descripcion-banner .descripcion__banner {
+        font-size: 30px;
+        
+    }
+    .descripcion-banner p{
+        text-align: center;
+    }
+    .container__somos{
+        display: grid;
+        grid-template-areas:
+        "contenido"
+        "imagen";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        margin: 30px;
+        height: 100%;
+    }
+   
+    .descripcion__somos {
+        grid-area: contenido;
+        width: 90vw;
+        text-align: justify;
+    }
+    .titulo__programas {
+        font-size: 24px;
+    }
+    .cartas {
+        width: 100%;
+    }
+    .footer-logo h2 {
+        font-size: 14px;
+    }
+    .footer-logo p {
+        font-size: 12px;
+    }
+    .footer-links h3 {
+        font-size: 14px;
+    }
+    .footer-links ul a {
+        font-size: 12px;
+    }
+    .copywright-tag {
+        font-size: 10px;
+    }
+}
