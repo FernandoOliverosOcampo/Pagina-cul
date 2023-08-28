@@ -50,11 +50,11 @@
     
 }
 .opciones-menu a:hover{
-    color: rgb(0, 4, 255);
-    border-bottom: 1px solid rgb(0, 4, 255);
+    color: rgb(0, 157, 204);
+    border-bottom: 1px solid rgb(0, 157, 204);
 }
 /*BANNER*/
-.container__banner{
+.container-banner{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,17 +69,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
     width: 100%;
+    height: 60vh;
     background-color: white;
     opacity: 0.80;
 }
-.descripcion-banner .descripcion__banner{
+.descripcion-banner h1{
     font-size: 50px;
     text-transform: uppercase;
+    text-align: center;
+}
+.descripcion-banner p{
+    font-size: 15px;
+    text-align: center;
 }
 /*Quienes somos*/
-.container__somos{
+.contenido-somos{
     display: grid;
     grid-template-areas: 
     "contenido imagen";
@@ -90,31 +95,44 @@
     height: 80vh;
     background-color: transparent;
 }
-.descripcion__somos{
+.descripcion-somos{
     grid-area: contenido;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "concepto";
+    grid-template-columns: auto;
+    grid-template-areas: auto;
+    place-content: center;
 }
-.descripcion__somos .titulo__somos{
+.titulo-somos{
+    grid-area: titulo;
+}
+.titulo-somos h2{
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 10px;
+    text-align: center;
 }
-.imagen_somos{
+.concepto-somos{
+    grid-area: concepto;
+    width: 50vw;
+}
+.concepto-somos p{
+    width: auto;
+    text-align: justify;
+}
+.imagen-somos{
     grid-area: imagen;
     margin: 20px;
 }
-.imagen_somos img{
+.imagen-somos img{
     width: auto;
     height: 50vh;
-
 }
 /* Programas */
-.container__programas{
+.contenido-programas{
     display: grid;
     grid-template-areas: 
     "titulo"
@@ -133,8 +151,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   
-    
+    margin: 20PX;
 }
 .cartas{
     grid-area: cartas;
@@ -145,40 +162,49 @@
     "concepto";
     grid-template-rows: auto;
     grid-template-columns: auto;
-    place-content: center;
+    padding: 15px;
     background-color: #ffffff;
     border-radius: 10px;
-    border: 1px solid rgb(59, 127, 255);
+    border: 1px solid rgb(0, 157, 204);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    height: 57vh;
+    height: 65vh;
     width: 25vw;
     margin: 20px;
+
+}
+.carta-titulo{
+    grid-area: nombre;
     
 }
-.cartas h3{
-    grid-area: nombre;
+.carta-titulo h3{
     text-transform: uppercase;
     text-align: center;
     max-width: 300px;
     padding-top: 10px;
-    color: rgb(4, 4, 160);
+    color: rgb(13, 70, 141);
 }
-.cartas img{
+.carta-imagen{
     grid-area: imagenes;
-    width: 100%;
-    height: 25vh;
+    display: grid;
+    place-content: center;
+}
+.carta-imagen img{
+    width: auto;
+    height: 20vh;
     padding: 10px;
 }
-.cartas p{
+.carta-cuerpo{
     grid-area: concepto;
+}
+.carta-cuerpo p{
     text-align: justify;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     font-size: 13px;
     max-width: 300px;
 }
 /*FOOTER*/
 .footer-container {
-    background-color: #d1d1d18c;
+    background-color: #252525;
     display: flex;
     justify-content: space-around;
     padding: 2vw 3vw;
@@ -192,11 +218,13 @@
 
 .footer-logo h2 {
     font-size: 1.5vw;
+    color: #cac8c8;
+
 }
 
 .footer-logo p {
     font-size: 1vw;
-    color: #6e6b6b;
+    color: #cac8c8;
     padding: 1.5rem 0rem;
     line-height: 2.1rem;
 }
@@ -207,7 +235,7 @@
 
 .fa {
     background-color: var(--black);
-    color: #ffffff;
+    color: #cac8c8;
     padding: .6rem;
     border-radius: .3rem;
 }
@@ -225,6 +253,7 @@
 .footer-links h3 {
     font-size: 1.5vw;
     margin-left: 20px;
+    color: #cac8c8;
 }
 
 .footer-links ul a li {
@@ -234,16 +263,16 @@
 
 .footer-links ul a {
     text-decoration: none;
-    color: #6e6b6b;
+    color: #cac8c8;
 }
 .copywright-tag {
-    background-color: lightgray;
+    background-color: rgb(113, 113, 113);
     padding: 1.5rem;
     font-size: 1vw;
     text-align: center;
 }
 .redes {
-    color: black;
+    color: #cac8c8;
 
 }
 /* Add a media query for screens smaller than 768px */
@@ -260,11 +289,11 @@
         padding: 30px 0;
         text-align: center;
     }
-    .descripcion__somos {
+    .descripcion-somos {
         width: 80vw;
         text-align: center;
     }
-    .imagen_somos img {
+    .imagen-somos img {
         height: auto;
         width: 80%;
         margin-left: 30px;
@@ -307,7 +336,7 @@
     .descripcion-banner p{
         text-align: center;
     }
-    .container__somos{
+    .contenido-somos{
         display: grid;
         grid-template-areas:
         "contenido"
@@ -317,12 +346,24 @@
         margin: 30px;
         height: 100%;
     }
-   
-    .descripcion__somos {
-        grid-area: contenido;
-        width: 90vw;
-        text-align: justify;
+    .imagen-somos{
+        grid-area: imagen;
     }
+   
+    .descripcion-somos {
+        grid-area: contenido;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "concepto";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+    .concepto-somos{
+        grid-area: concepto;
+        width: auto;
+    }
+  
     .titulo__programas {
         font-size: 24px;
     }
